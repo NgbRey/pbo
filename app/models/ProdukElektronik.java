@@ -1,5 +1,10 @@
 package app.models;
 
+/**
+ * Kelas abstrak dasar untuk semua produk elektronik.
+ * Menyimpan atribut umum seperti ID, nama, harga beli/jual, dan stok.
+ */
+
 public abstract class ProdukElektronik {
     private String idProduk;
     private String nama;

@@ -1,5 +1,10 @@
 package app.pembayaran;
 
+/**
+ * Implementasi metode pembayaran spesifik.
+ * Menangani logika pemrosesan pembayaran dan format nama metode.
+ */
+
 public class KartuKredit implements Pembayaran {
     private String namaPemilik;
     private String noKartu;

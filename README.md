@@ -1,7 +1,16 @@
 # Digitala Store
 
-**Digitala Store** adalah aplikasi berbasis Java (mendukung CLI dan GUI) untuk manajemen toko elektronik. Aplikasi ini menjembatani interaksi antara Admin (pengelola toko) dan Pelanggan (pembeli).
+**Digitala Store** adalah aplikasi berbasis Java (mendukung CLI dan GUI) untuk manajemen toko elektronik. Program ini menjembatani interaksi antara Admin (pengelola toko) dan Pelanggan (pembeli).
 
+**Program ini dibuat untuk memenuhi UAS Praktikum Pemrograman Berorientasi Objek.**
+
+**Disusun oleh:**
+* Rajabi
+* Teuku Al
+* Azira
+* M Rayyanta
+
+---
 ##  Fitur
 
 ### 1. Admin

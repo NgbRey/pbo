@@ -5,6 +5,11 @@ import app.models.ProdukElektronik;
 import app.models.Transaksi;
 import app.DataStore;
 
+/**
+ * Merepresentasikan pengguna dengan hak akses Administrator.
+ * Memiliki kemampuan untuk mengelola produk dan memvalidasi transaksi.
+ */
+
 public class Admin extends User {
 
     public Admin(String userID, String username, String password, String nama) {
@@ -12,11 +17,13 @@ public class Admin extends User {
     }
 
     public String getId() {
-    return super.getUserID();
-}
+        return super.getUserID();
+    }
 
     @Override
-    public String getRole() { return "ADMIN"; }
+    public String getRole() {
+        return "ADMIN";
+    }
 
     // Admin operations (simple implementations interacting with DataStore)
     public void tambahProduk(ProdukElektronik p) {

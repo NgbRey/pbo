@@ -1,7 +1,12 @@
 package app.models;
 
+/**
+ * Implementasi konkret dari ProdukElektronik.
+ * Digunakan untuk membuat objek produk nyata yang dapat dijual.
+ */
+
 public class ProdukGeneric extends ProdukElektronik {
-    
+
     public ProdukGeneric(String id, String nama, double hargaBeli, double hargaJual, int stok, String deskripsi) {
         super(id, nama, hargaBeli, hargaJual, stok, deskripsi);
     }

@@ -1,5 +1,10 @@
 package app.pembayaran;
 
+/**
+ * Implementasi metode pembayaran spesifik.
+ * Menangani logika pemrosesan pembayaran dan format nama metode.
+ */
+
 public class EWallet implements Pembayaran {
     private String provider;
     private String idAkun;

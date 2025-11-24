@@ -1,5 +1,11 @@
 package app.pembayaran;
 
+/**
+ * Implementasi pembayaran placeholder.
+ * Digunakan saat memuat data transaksi lama dari file teks
+ * di mana logika pembayaran real-time tidak lagi diperlukan.
+ */
+
 public class PembayaranDummy implements Pembayaran {
     private String namaMetode;
 

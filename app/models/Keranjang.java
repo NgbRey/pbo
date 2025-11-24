@@ -3,6 +3,11 @@ package app.models;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Merepresentasikan keranjang belanja pelanggan sementara.
+ * Menyimpan daftar item yang akan dibeli sebelum proses checkout.
+ */
+
 public class Keranjang {
     // Produk -> qty
     private HashMap<ProdukElektronik, Integer> items = new HashMap<>();

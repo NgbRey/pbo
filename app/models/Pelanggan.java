@@ -3,6 +3,11 @@ package app.models;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Merepresentasikan pengguna tipe Pelanggan (Customer).
+ * Memiliki atribut tambahan seperti alamat, no telepon, dan riwayat transaksi.
+ */
+
 public class Pelanggan extends User {
     private String alamat;
     private String noTelepon;
@@ -15,16 +20,28 @@ public class Pelanggan extends User {
         this.historyTransaksi = new ArrayList<>();
     }
 
-    public String getAlamat() { return alamat; }
-    public String getNoTelepon() { return noTelepon; }
-    public List<Transaksi> getHistoryTransaksi() { return historyTransaksi; }
+    public String getAlamat() {
+        return alamat;
+    }
 
-    public void addToHistory(Transaksi t) { this.historyTransaksi.add(t); }
+    public String getNoTelepon() {
+        return noTelepon;
+    }
+
+    public List<Transaksi> getHistoryTransaksi() {
+        return historyTransaksi;
+    }
+
+    public void addToHistory(Transaksi t) {
+        this.historyTransaksi.add(t);
+    }
 
     public String getId() {
-    return super.getUserID();
-}
+        return super.getUserID();
+    }
 
     @Override
-    public String getRole() { return "PELANGGAN"; }
+    public String getRole() {
+        return "PELANGGAN";
+    }
 }

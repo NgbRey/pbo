@@ -1,5 +1,10 @@
 package app.models;
 
+/**
+ * Kelas abstrak yang merepresentasikan pengguna umum dalam sistem.
+ * Menjadi parent class untuk Admin dan Pelanggan.
+ */
+
 public abstract class User {
     private String userID;
     private String username;
@@ -13,12 +18,25 @@ public abstract class User {
         this.nama = nama;
     }
 
-    public String getUserID() { return userID; }
-    public String getUsername() { return username; }
-    public String getPassword() { return password; } // untuk demo CLI sederhana
-    public String getNama() { return nama; }
+    public String getUserID() {
+        return userID;
+    }
 
-    public void setNama(String nama) { this.nama = nama; }
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    } // untuk demo CLI sederhana
+
+    public String getNama() {
+        return nama;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
 
     public boolean checkPassword(String pw) {
         return this.password.equals(pw);

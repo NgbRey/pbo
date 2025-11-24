@@ -1,5 +1,10 @@
 package app.pembayaran;
 
+/**
+ * Implementasi metode pembayaran spesifik.
+ * Menangani logika pemrosesan pembayaran dan format nama metode.
+ */
+
 public class TransferBank implements Pembayaran {
     private String namaBank;
     private long noRek;

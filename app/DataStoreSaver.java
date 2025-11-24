@@ -6,6 +6,12 @@ import java.util.*;
 import app.models.*;
 import app.pembayaran.*;
 
+/**
+ * Kelas utilitas untuk menangani persistensi data (File I/O).
+ * Bertanggung jawab untuk menyimpan (save) dan memuat (load) data
+ * dari file teks (akun.txt, produk.txt, transaksi.txt).
+ */
+
 public class DataStoreSaver {
 
     private static final String FILE_AKUN = "akun.txt";

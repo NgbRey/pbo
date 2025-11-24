@@ -9,6 +9,12 @@ import app.models.*;
 import app.pembayaran.*;
 import app.exceptions.*;
 
+/**
+ * Entry point utama untuk aplikasi versi Command Line Interface (CLI).
+ * Kelas ini menangani interaksi pengguna melalui terminal, termasuk login,
+ * menu admin, dan menu pelanggan.
+ */
+
 public class MainApp {
     private static Scanner sc = new Scanner(System.in);
 
