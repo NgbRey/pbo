@@ -1,0 +1,16 @@
+ProdukGeneric;P001;Lenovo ThinkPad X1;1.1E7;1.45E7;5;Laptop bisnis premium dengan Intel i7, RAM 16GB, SSD 512GB
+ProdukGeneric;P002;Acer Aspire 5;5000000.0;6800000.0;8;Laptop affordable dengan Intel i5, RAM 8GB, SSD 512GB
+ProdukGeneric;P003;ASUS ROG Strix G15;1.7E7;2.1E7;4;Gaming laptop dengan Ryzen 7, RAM 16GB, SSD 1TB
+ProdukGeneric;P004;HP Pavilion 14;7200000.0;9200000.0;6;Laptop multimedia Intel i5, RAM 8GB, SSD 512GB
+ProdukGeneric;P005;MacBook Air M1;1.1E7;1.35E7;7;Laptop premium Apple M1, RAM 8GB, SSD 256GB
+ProdukGeneric;P006;Dell XPS 13;1.4E7;1.7E7;3;Ultrabook premium Intel i7, RAM 16GB, SSD 512GB
+ProdukGeneric;P007;iPhone 12;7500000.0;9000000.0;5;Smartphone layar 6.1 inch, kamera 12MP, baterai 2815 mAh
+ProdukGeneric;P008;iPhone 14 Pro;1.25E7;1.55E7;3;Smartphone premium layar 6.1 inch, kamera 48MP, baterai 3200 mAh
+ProdukGeneric;P009;Samsung Galaxy S21;7000000.0;8500000.0;6;Smartphone layar 6.2 inch, kamera 64MP, baterai 4000 mAh
+ProdukGeneric;P010;Xiaomi Redmi Note 12;1800000.0;2400000.0;12;Smartphone budget layar 6.7 inch, kamera 50MP, baterai 5000 mAh
+ProdukGeneric;P011;Oppo Reno 8;3500000.0;4500000.0;10;Smartphone mid-range layar 6.4 inch, kamera 64MP, baterai 4500 mAh
+ProdukGeneric;P012;Vivo V27 Pro;4200000.0;5200000.0;9;Smartphone layar 6.78 inch, kamera 50MP, baterai 4600 mAh
+ProdukGeneric;P013;Xiaomi Mi Band 7;350000.0;550000.0;12;Smartwatch layar 1.62 inch, Heart Rate & Sleep Tracking, 180 mAh
+ProdukGeneric;P014;Ezviz C6N 360;250000.0;350000.0;10;CCTV 1080p dengan night vision dan WiFi
+ProdukGeneric;P015;Sony WF-1000XM4;1800000.0;2300000.0;7;TWS Bluetooth 5.2, battery 8 jam, noise cancelling
+ProdukGeneric;M001;Civic Type R;1.4E9;1.35E9;1;Second like new

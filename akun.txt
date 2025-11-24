@@ -1,0 +1,8 @@
+ADMIN;A001;rayyanta;rayyanta123;Rayyanta
+ADMIN;A002;abi;abi123;Abi
+ADMIN;A003;al;al123;Al
+ADMIN;A004;nia;nia123;Nia
+PELANGGAN;U001;mira;4567;Mira;Rumah;7890
+PELANGGAN;U002;aldi;1234;Aldi;Kantor;1234
+PELANGGAN;U003;Gemini;5678;Gemi;Rumah;3456
+PELANGGAN;U008;rrr;111;Ray;Jawa;0000
