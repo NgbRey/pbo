@@ -6,10 +6,11 @@ import app.models.Transaksi;
 import app.DataStore;
 
 /**
- * Merepresentasikan pengguna dengan hak akses Administrator.
- * Memiliki kemampuan untuk mengelola produk dan memvalidasi transaksi.
+ * Representasi pengguna dengan hak akses Administrator.
+ * Memiliki wewenang mengelola data produk dan transaksi.
+ *
+ * @author Rajabi, Teuku Al, Azira, M Rayyanta
  */
-
 public class Admin extends User {
 
     public Admin(String userID, String username, String password, String nama) {
@@ -25,11 +26,21 @@ public class Admin extends User {
         return "ADMIN";
     }
 
-    // Admin operations (simple implementations interacting with DataStore)
+    /**
+     * Menambahkan produk baru ke inventaris toko.
+     * 
+     * @param p Objek produk yang akan ditambahkan.
+     */
     public void tambahProduk(ProdukElektronik p) {
         DataStore.getListProduk().add(p);
     }
 
+    /**
+     * Menghapus produk dari inventaris berdasarkan ID.
+     * 
+     * @param idProduk ID produk yang akan dihapus.
+     * @return true jika berhasil dihapus, false jika ID tidak ditemukan.
+     */
     public boolean hapusProduk(String idProduk) {
         return DataStore.getListProduk().removeIf(p -> p.getIdProduk().equals(idProduk));
     }
@@ -42,6 +53,13 @@ public class Admin extends User {
         return DataStore.getListTransaksi();
     }
 
+    /**
+     * Menerima transaksi yang berstatus PENDING dan mengubahnya menjadi DITERIMA.
+     * Proses ini juga akan mengurangi stok barang secara otomatis.
+     *
+     * @param idTransaksi ID transaksi yang akan diproses.
+     * @return true jika transaksi ditemukan dan berhasil diproses.
+     */
     public boolean terimaTransaksi(String idTransaksi) {
         for (Transaksi t : DataStore.getListTransaksi()) {
             if (t.getIdTransaksi().equals(idTransaksi) && t.getStatus().equals("PENDING")) {

@@ -1,10 +1,12 @@
 package app.exceptions;
 
 /**
- * Exception kustom yang dilempar saat proses login gagal
- * (Username tidak ada atau password salah).
+ * Custom Exception yang dilempar saat login gagal karena username tidak
+ * ditemukan
+ * atau password tidak cocok.
+ *
+ * @author Rajabi, Teuku Al, Azira, M Rayyanta
  */
-
 public class AkunTidakDitemukanException extends Exception {
     public AkunTidakDitemukanException(String message) {
         super(message);

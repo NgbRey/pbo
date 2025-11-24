@@ -8,11 +8,11 @@ import java.util.Map;
 import app.pembayaran.Pembayaran;
 
 /**
- * Merepresentasikan data transaksi yang telah dilakukan (Checkout).
- * Menyimpan detail pelanggan, item yang dibeli, total harga, metode pembayaran,
- * dan status transaksi (PENDING/DITERIMA).
+ * Representasi nota atau invoice dari pembelian yang telah dilakukan.
+ * Menyimpan snapshot data saat transaksi terjadi.
+ *
+ * @author Rajabi, Teuku Al, Azira, M Rayyanta
  */
-
 public class Transaksi {
     private String idTransaksi;
     private Pelanggan pelanggan;
@@ -68,7 +68,10 @@ public class Transaksi {
         this.tanggal = tanggal;
     } // ← TAMBAHKAN INI
 
-    // saat transaksi diterima, kurangi stok barang
+    /**
+     * Mengurangi stok fisik barang di DataStore berdasarkan item di transaksi ini.
+     * Dipanggil saat Admin menerima transaksi.
+     */
     public void reduceStock() {
         for (Map.Entry<ProdukElektronik, Integer> e : items.entrySet()) {
             ProdukElektronik p = e.getKey();
@@ -106,6 +109,9 @@ public class Transaksi {
         return sb.toString();
     }
 
+    /**
+     * Mencetak invoice atau detail transaksi ke konsol.
+     */
     public void printInvoice() {
         System.out.println("\n====== INVOICE ======");
         System.out.println("ID: " + idTransaksi);

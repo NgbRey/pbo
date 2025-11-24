@@ -2,9 +2,9 @@ package app.pembayaran;
 
 /**
  * Implementasi metode pembayaran spesifik.
- * Menangani logika pemrosesan pembayaran dan format nama metode.
+ *
+ * @author Rajabi, Teuku Al, Azira, M Rayyanta
  */
-
 public class TransferBank implements Pembayaran {
     private String namaBank;
     private long noRek;
@@ -14,6 +14,12 @@ public class TransferBank implements Pembayaran {
         this.noRek = noRek;
     }
 
+    /**
+     * Memproses logika pembayaran simulasi.
+     * 
+     * @param amount Total tagihan.
+     * @return true (selalu berhasil dalam simulasi ini).
+     */
     @Override
     public boolean prosesPembayaran(double amount) {
         System.out.println("Proses transfer ke " + namaBank + " no rek " + noRek + " sebesar " + amount);

@@ -2,9 +2,9 @@ package app.pembayaran;
 
 /**
  * Implementasi metode pembayaran spesifik.
- * Menangani logika pemrosesan pembayaran dan format nama metode.
+ *
+ * @author Rajabi, Teuku Al, Azira, M Rayyanta
  */
-
 public class EWallet implements Pembayaran {
     private String provider;
     private String idAkun;
@@ -14,6 +14,12 @@ public class EWallet implements Pembayaran {
         this.idAkun = idAkun;
     }
 
+    /**
+     * Memproses logika pembayaran simulasi.
+     * 
+     * @param amount Total tagihan.
+     * @return true (selalu berhasil dalam simulasi ini).
+     */
     @Override
     public boolean prosesPembayaran(double amount) {
         System.out.println("Memproses pembayaran e-wallet " + provider + " id " + idAkun + " sebesar " + amount);

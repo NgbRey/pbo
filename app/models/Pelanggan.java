@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Merepresentasikan pengguna tipe Pelanggan (Customer).
- * Memiliki atribut tambahan seperti alamat, no telepon, dan riwayat transaksi.
+ * Representasi pengguna tipe Pelanggan (Customer).
+ *
+ * @author Rajabi, Teuku Al, Azira, M Rayyanta
  */
-
 public class Pelanggan extends User {
     private String alamat;
     private String noTelepon;
@@ -32,6 +32,11 @@ public class Pelanggan extends User {
         return historyTransaksi;
     }
 
+    /**
+     * Menambahkan transaksi ke dalam riwayat belanja pribadi pelanggan.
+     * 
+     * @param t Objek transaksi yang baru dilakukan.
+     */
     public void addToHistory(Transaksi t) {
         this.historyTransaksi.add(t);
     }

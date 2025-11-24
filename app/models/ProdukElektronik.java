@@ -1,10 +1,10 @@
 package app.models;
 
 /**
- * Kelas abstrak dasar untuk semua produk elektronik.
- * Menyimpan atribut umum seperti ID, nama, harga beli/jual, dan stok.
+ * Abstract class yang mendefinisikan kerangka dasar produk elektronik.
+ *
+ * @author Rajabi, Teuku Al, Azira, M Rayyanta
  */
-
 public abstract class ProdukElektronik {
     private String idProduk;
     private String nama;
@@ -69,9 +69,17 @@ public abstract class ProdukElektronik {
         this.deskripsi = deskripsi;
     }
 
+    /**
+     * Mengurangi stok produk saat terjadi pembelian.
+     * 
+     * @param qty Jumlah barang yang dibeli.
+     */
     public void reduceStok(int qty) {
         this.stok = this.stok - qty;
     }
 
+    /**
+     * Menampilkan spesifikasi detail produk ke konsol.
+     */
     public abstract void displaySpesifikasi();
 }

@@ -7,9 +7,11 @@ import app.models.*;
 import app.pembayaran.*;
 
 /**
- * Kelas utilitas untuk menangani persistensi data (File I/O).
- * Bertanggung jawab untuk menyimpan (save) dan memuat (load) data
- * dari file teks (akun.txt, produk.txt, transaksi.txt).
+ * Utility class untuk menangani persistensi data (File I/O).
+ * Bertanggung jawab menyimpan (save) dan memuat (load) data dari file teks
+ * (.txt) agar data tidak hilang saat aplikasi ditutup.
+ *
+ * @author Rajabi, Teuku Al, Azira, M Rayyanta
  */
 
 public class DataStoreSaver {
@@ -18,8 +20,9 @@ public class DataStoreSaver {
     private static final String FILE_PRODUK = "produk.txt";
     private static final String FILE_TRANSAKSI = "transaksi.txt";
 
-    // SAVE AKUN USER & ADMIN
-
+    /**
+     * Menyimpan seluruh data akun (Admin dan Pelanggan) ke file 'akun.txt'.
+     */
     public static void saveAkun() {
         try (PrintWriter pw = new PrintWriter(new FileWriter(FILE_AKUN))) {
 
@@ -40,7 +43,9 @@ public class DataStoreSaver {
         }
     }
 
-    // LOAD AKUN
+    /**
+     * Memuat data akun dari file 'akun.txt' ke dalam memori aplikasi.
+     */
     public static void loadAkun() {
         File file = new File(FILE_AKUN);
         if (!file.exists())
@@ -62,7 +67,9 @@ public class DataStoreSaver {
         }
     }
 
-    // SAVE PRODUK
+    /**
+     * Menyimpan data produk beserta stok dan harganya ke file 'produk.txt'.
+     */
     public static void saveProduk() {
         try (PrintWriter pw = new PrintWriter(new FileWriter(FILE_PRODUK))) {
 
@@ -109,7 +116,9 @@ public class DataStoreSaver {
         }
     }
 
-    // SAVE TRANSAKSI
+    /**
+     * Menyimpan riwayat transaksi ke file 'transaksi.txt'.
+     */
     public static void saveTransaksi() {
         try (PrintWriter pw = new PrintWriter(new FileWriter(FILE_TRANSAKSI))) {
 
@@ -220,9 +229,10 @@ public class DataStoreSaver {
         }
     }
 
-    // ==========================
-    // SAVE BARANG TERJUAL
-    // ==========================
+    /**
+     * Menyimpan laporan barang yang terjual ke file khusus 'barang_terjual.txt'
+     * untuk laporan admin.
+     */
     public static void saveBarangTerjual() {
         try (PrintWriter pw = new PrintWriter(new FileWriter("barang_terjual.txt"))) {
 

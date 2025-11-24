@@ -22,11 +22,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Entry point utama untuk aplikasi versi Graphical User Interface (GUI).
- * Menggunakan Java Swing untuk menampilkan jendela aplikasi, form login,
- * dashboard admin, dan katalog pelanggan dengan desain modern.
+ * Entry point utama untuk aplikasi Digitala Store versi GUI (Graphical User
+ * Interface).
+ * Menggunakan library Java Swing untuk menampilkan antarmuka visual yang
+ * modern,
+ * mencakup form login, dashboard admin, dan katalog belanja pelanggan.
+ *
+ * @author Rajabi, Teuku Al, Azira, M Rayyanta
+ * @version 1.0
  */
-
 public class MainAppGUI extends JFrame {
 
     // --- PALET WARNA (HIJAU TOSCA) ---
@@ -50,6 +54,10 @@ public class MainAppGUI extends JFrame {
     private User currentUser;
     private Keranjang currentKeranjang;
 
+    /**
+     * Konstruktor utama untuk menginisialisasi frame, memuat data, dan mengatur
+     * layout panel.
+     */
     public MainAppGUI() {
         // Setup Font
         FONT_INTER_BOLD = new Font("Inter", Font.BOLD, 14);
@@ -98,6 +106,11 @@ public class MainAppGUI extends JFrame {
         });
     }
 
+    /**
+     * Method utama untuk menjalankan aplikasi GUI dalam Event Dispatch Thread.
+     *
+     * @param args Argumen baris perintah.
+     */
     public static void main(String[] args) {
         System.setProperty("awt.useSystemAAFontSettings", "on");
         System.setProperty("swing.aatext", "true");

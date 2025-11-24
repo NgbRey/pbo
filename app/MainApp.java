@@ -8,14 +8,26 @@ import java.util.Map;
 import app.models.*;
 import app.pembayaran.*;
 import app.exceptions.*;
+import app.exeptions.AkunTidakDitemukanException;
 
 /**
- * Entry point utama untuk aplikasi versi Command Line Interface (CLI).
- * Kelas ini menangani interaksi pengguna melalui terminal, termasuk login,
- * menu admin, dan menu pelanggan.
+ * Entry point utama untuk aplikasi Digitala Store versi CLI (Command Line
+ * Interface).
+ * Kelas ini menangani interaksi pengguna melalui terminal, termasuk autentikasi
+ * user,
+ * navigasi menu admin, dan simulasi belanja untuk pelanggan.
+ *
+ * @author Rajabi, Teuku Al, Azira, M Rayyanta
+ * @version 1.0
  */
-
 public class MainApp {
+
+    /**
+     * Method utama yang dijalankan saat aplikasi dimulai.
+     * Memuat data dari file (loading) dan menampilkan menu utama.
+     *
+     * @param args Argumen baris perintah (tidak digunakan).
+     */
     private static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -65,6 +77,14 @@ public class MainApp {
         }
     }
 
+    /**
+     * Menangani proses login user dengan meminta input username dan password.
+     *
+     * @return Objek {@link User} yang berhasil login (bisa berupa Admin atau
+     *         Pelanggan).
+     * @throws AkunTidakDitemukanException Jika username tidak ada atau password
+     *                                     salah.
+     */
     private static User prosesLogin() throws AkunTidakDitemukanException {
         System.out.print("Username: ");
         String u = sc.nextLine().trim();
@@ -80,7 +100,11 @@ public class MainApp {
         return user;
     }
 
-    // --- MENU ADMIN ---
+    /**
+     * Menampilkan menu khusus untuk role Admin.
+     *
+     * @param admin Objek admin yang sedang login.
+     */
     private static void menuAdmin(Admin admin) {
         boolean keluar = false;
         while (!keluar) {
@@ -557,7 +581,11 @@ public class MainApp {
         }
     }
 
-    // --- MENU PELANGGAN ---
+    /**
+     * Menampilkan menu khusus untuk role Pelanggan.
+     *
+     * @param p Objek pelanggan yang sedang login.
+     */
     private static void menuPelanggan(Pelanggan p) {
         Keranjang keranjang = new Keranjang();
         boolean keluar = false;

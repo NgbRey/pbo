@@ -1,10 +1,11 @@
 package app.exceptions;
 
 /**
- * Exception kustom yang dilempar saat pelanggan mencoba membeli barang
- * melebihi stok yang tersedia.
+ * Custom Exception yang dilempar saat user mencoba membeli barang melebihi
+ * jumlah stok yang tersedia.
+ *
+ * @author Rajabi, Teuku Al, Azira, M Rayyanta
  */
-
 public class StokKosongException extends Exception {
     public StokKosongException(String message) {
         super(message);
